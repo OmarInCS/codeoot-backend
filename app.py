@@ -24,7 +24,7 @@ db.init_app(app)
 db.create_all()
 
 CORS(app, resources={r"/*": {"origins": "*"}})
-app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_HEADERS'] = 'application/json'
 
 
 '''
