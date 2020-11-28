@@ -24,7 +24,6 @@ db.init_app(app)
 db.create_all()
 
 CORS(app, resources={r"/*": {"origins": "*"}})
-app.config['CORS_HEADERS'] = 'application/json'
 
 
 '''
@@ -33,7 +32,7 @@ app.config['CORS_HEADERS'] = 'application/json'
 # CORS Headers
 @app.after_request
 def after_request(response):
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,true')
+    response.headers.add('Access-Control-Allow-Headers', 'application/json,Authorization,true')
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS,PATCH')
     response.headers.add('Access-Control-Allow-Origin', 'https://codeoot-frontend.herokuapp.com')
     return response
