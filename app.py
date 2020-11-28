@@ -23,7 +23,7 @@ app.config.from_object(config)
 db.init_app(app)
 db.create_all()
 
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}}, headers='Content-Type')
 
 '''
 @TODO: Use the after_request decorator to set Access-Control-Allow
