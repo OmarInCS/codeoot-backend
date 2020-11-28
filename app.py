@@ -33,7 +33,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 def after_request(response):
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,true')
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS,PUSH')
-    response.headers.add('Access-Control-Allow-Origin', 'https://codeoot-backend.herokuapp.com')
+    response.headers.add('Access-Control-Allow-Origin', 'https://codeoot-frontend.herokuapp.com')
     return response
 
 # ----------------------------------------------------------------------------#
